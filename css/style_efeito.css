@@ -77,3 +77,7 @@ input:checked ~ .details{
     padding: 0;
     color: #fff;
 }
+
+img{
+    width: 400px;
+}
