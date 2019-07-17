@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .box{
+    width: 580px;
+    height: 400px;
+    background: #000;
+    transition: ease-in-out 8s;
+    background-position: top;
+}
+
+.container .box.box1{
+    background: url(../img/img01.png);
+    background-size: cover;
+}
+
+.container .box.box2{
+    background: url(../img/img02.png);
+    background-size: cover;
+}
+
+.container .box:hover{
+    background-position: bottom;
+}
