@@ -17,6 +17,7 @@ body{
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-template-rows: auto;
     grid-gap: 0 40px;
+
 }
 .container .box{
     position: relative;
@@ -35,11 +36,35 @@ body{
     right: -2px;
     bottom: -2px;
     background: #fff;
+    transform: skew(2deg,2deg);
     z-index: -1;
+}
+.container .box:nth-child(1):before {
+    background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container .box:nth-child(2):before {
+    background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.container .box:nth-child(3):before {
+    background: linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.container .box:nth-child(4):before {
+    background: linear-gradient(315deg,#ff0000,#ffc107);
+}
+.container .box:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgb(255, 255, 255,0.05);
+    pointer-events: none;
 }
 .content{
     position: relative;
     padding: 20px;
+    transform: translateY(40px);
 }
 .content h2{
     position: absolute;
@@ -78,12 +103,12 @@ body{
     display: inline-block;
     color: #fff;
     transition: 0.5s;
-    transform: rotateY(-40px);
+    transform: translateY(-40px);
     opacity: 0;
     visibility: hidden;
 }
 .box:hover .content a{
-    transform: rotateY(0px);
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
 }
